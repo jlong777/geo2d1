@@ -1,0 +1,18 @@
+Populate a DataONE (http://dataone.org) Generic Member Node with public
+metadata from a GeoNetwork (http://geonetwork-opensource.org/) instance.
+
+The International Arctic Research Center (IARC) Data Archive uses the xml
+form of ISO 19115 metadata, ISO 19139. Not all researchers fill out
+metadata that validates, however, so this code xslt transforms the public
+ISO 19139 metadata records from IARC's geonetwork OAI-PMH endpoint into
+dublin core extended (dcx), and inserts the corresponding geonetwork page 
+under the 'source' element. It then uploads the validated dcx into IARC's 
+DataONE GMN as metadata, while the original ISO 19139 metadata is uploaded 
+as data (text/xml). A resource map relating the two completes the package.
+Each time this script runs, it checks to see if a package update is required:
+the current GMN ISO 19139 data object (xml) is compared with the downloaded
+OAI-PMH version, and if different, triggers the package update.
+
+Code development is ongoing, with the desired goal of uploading data in 
+addition to metadata.
+
