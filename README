@@ -13,6 +13,6 @@ Each time this script runs, it checks to see if a package update is required:
 the current GMN ISO 19139 data object (xml) is compared with the downloaded
 OAI-PMH version, and if different, triggers the package update.
 
-Code development is ongoing, with the desired goal of uploading data in 
+Code development is ongoing, with the desired goal of uploading all data in 
 addition to metadata.
 
